@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build backend image
-        run: docker build -t enzomiretti1/golgana-backend:latest ./backend
+        run: docker build -t enzomiretti1/golgana-backend:latest DespliegueGolGana-main/appdemo/backend
 
       - name: Push backend image
         run: docker push enzomiretti1/golgana-backend:latest
@@ -38,7 +38,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build frontend image
-        run: docker build -t enzomiretti1/golgana-frontend:latest ./frontend
+        run: docker build -t enzomiretti1/golgana-frontend:latest DespliegueGolGana-main/appdemo/frontend
 
       - name: Push frontend image
         run: docker push enzomiretti1/golgana-frontend:latest
